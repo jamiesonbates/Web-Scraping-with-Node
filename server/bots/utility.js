@@ -4,9 +4,9 @@ const request = require('request');
 
 function getDOM(url) {
   return new Promise((resolve, reject) => {
-    request.get(url, (err, res, DOM) => {
+    return request.get(url, (err, res, DOM) => {
       if (err) {
-        return reject(err);
+        reject(err);
       }
 
       resolve(DOM);
