@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: 'postgresql',
-    connection: 'postgres://localhost/web-scraper_dev',
+    connection: 'postgres://localhost/seattle_times_dev',
     migrations: {
       directory: __dirname + '/server/db/migrations'
     },
@@ -11,7 +11,7 @@ module.exports = {
   },
   test: {
     client: 'postgresql',
-    connection: 'postgres://localhost/web-scraper_test',
+    connection: 'postgres://localhost/seattle_times_test',
     migrations: {
       directory: __dirname + '/server/db/migrations'
     },

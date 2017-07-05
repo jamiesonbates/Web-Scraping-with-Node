@@ -2,6 +2,7 @@
 
 const { getDOM } = require('./utility');
 const cheerio = require('cheerio');
+const moment = require('moment');
 
 function scrapeSeattleTimes(url) {
   return getDOM(url)
@@ -16,15 +17,16 @@ function scrapeSeattleTimes(url) {
       return { primary, secondary };
     })
     .catch((err) => {
-      console.error(err);
+      throw err;
     })
 }
 
 function extractPrimary($) {
   const title = $('.top-story-title').text();
-  const link = $('.top-story-title a').attr('href');
+  const url = $('.top-story-title a').attr('href');
+  const story_date = moment().format();
 
-  return { title, link };
+  return { title, url, story_date };
 }
 
 function extractSecondary($) {
@@ -34,10 +36,12 @@ function extractSecondary($) {
   // use cheerio's each method to iterate through li
   list.each((i, el) => {
     const title = $(el).children('a').text();
-    const link = $(el).children('a').attr('href');
+    const url = $(el).children('a').attr('href');
+    const story_date = moment().format();
 
-    stories.push({ title, link });
+    stories.push({ title, url, story_date });
   });
+  
   return stories;
 }
 

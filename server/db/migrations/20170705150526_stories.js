@@ -3,9 +3,11 @@
 exports.up = function(knex) {
   return knex.schema.createTable('stories', (table) => {
     table.increments();
-    table.string('title');
-    table.string('url');
-    table.boolean('primary');
+    table.text('title');
+    table.text('url');
+    table.boolean('was_primary').defaultTo(false);
+    table.timestamp('story_date');
+    table.timestamps(true, true);
   });
 };
 
