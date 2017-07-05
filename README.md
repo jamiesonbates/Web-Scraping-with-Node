@@ -18,3 +18,4 @@
 * (ScraperWiki)
 [https://scraperwiki.com/]
 * (Scotch.io tutorial)[https://scotch.io/tutorials/scraping-the-web-with-node-js]
+* (101 scraping exercies)[https://github.com/stanfordjournalism/search-script-scrape]

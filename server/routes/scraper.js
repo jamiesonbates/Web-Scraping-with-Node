@@ -2,7 +2,7 @@
 
 const router = require('express').Router();
 
-router.get('/', (req, res, next) => {
+router.get('/seattletimes', (req, res, next) => {
   // use HTTPie to hit this route and test your server
   res.send('Hi from API');
 });
