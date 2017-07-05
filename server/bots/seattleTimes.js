@@ -26,7 +26,19 @@ function extractPrimary($) {
 }
 
 function extractSecondary($) {
-  // extract secondary stories
+  const list = $('.secondary .story-list ul').children('li');
+  const stories = [];
+
+  // use cheerio's each method to iterate through li
+  list.each((i, el) => {
+    const title = $(el).children('a').text();
+    const url = $(el).children('a').attr('href');
+    const story_date = moment().format();
+
+    stories.push({ title, url, story_date });
+  });
+
+  return stories;
 }
 
 module.exports = scrapeSeattleTimes;
