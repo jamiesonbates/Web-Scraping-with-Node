@@ -4,7 +4,9 @@
   "description": "A guide for web scraping with node.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "knex": "knex",
+    "start": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/jamiesonbates/Web-Scraping-with-Node/issues"
   },
-  "homepage": "https://github.com/jamiesonbates/Web-Scraping-with-Node#readme"
+  "homepage": "https://github.com/jamiesonbates/Web-Scraping-with-Node#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "knex": "^0.13.0",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
