@@ -1,0 +1,25 @@
+{
+  "name": "web-scraping-with-node",
+  "version": "1.0.0",
+  "description": "A guide for web scraping with node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiesonbates/Web-Scraping-with-Node.git"
+  },
+  "keywords": [
+    "Node",
+    "Scraper",
+    "Scraping",
+    "Scrape"
+  ],
+  "author": "Jamieson Bates <jamiesonbates@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamiesonbates/Web-Scraping-with-Node/issues"
+  },
+  "homepage": "https://github.com/jamiesonbates/Web-Scraping-with-Node#readme"
+}
