@@ -9,13 +9,14 @@
   * Load the DOM with cheerio.
   * Traverse the DOM and extract data with cheerio.
   * Persist data to a database.
-* BONUS: automate the scraper with Heroku scheduler.
+  
+!(Slides)[https://docs.google.com/presentation/d/1XJkcVoDBCyGI953EfEXmbna2DHriMzJYjGk0aYlpHGk/edit?usp=sharing]
 
 ## Resources
 
-* (request)[https://www.npmjs.com/package/request]
-* (cheeriojs)[https://cheerio.js.org/]
-* (ScraperWiki)
+* !(request)[https://www.npmjs.com/package/request]
+* !(cheeriojs)[https://cheerio.js.org/]
+* !(ScraperWiki)
 [https://scraperwiki.com/]
-* (Scotch.io tutorial)[https://scotch.io/tutorials/scraping-the-web-with-node-js]
-* (101 scraping exercies)[https://github.com/stanfordjournalism/search-script-scrape]
+* !(Scotch.io tutorial)[https://scotch.io/tutorials/scraping-the-web-with-node-js]
+* !(101 scraping exercies)[https://github.com/stanfordjournalism/search-script-scrape]
