@@ -41,7 +41,7 @@ function extractSecondary($) {
 
     stories.push({ title, url, story_date });
   });
-  
+
   return stories;
 }
 
