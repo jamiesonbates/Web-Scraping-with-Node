@@ -8,4 +8,4 @@ function getDOM(url) {
 
 module.exports = {
   getDOM
-}
+};
