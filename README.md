@@ -14,9 +14,9 @@
 
 ## Resources
 
-* !(request)[https://www.npmjs.com/package/request]
-* !(cheeriojs)[https://cheerio.js.org/]
-* !(ScraperWiki)
-[https://scraperwiki.com/]
-* !(Scotch.io tutorial)[https://scotch.io/tutorials/scraping-the-web-with-node-js]
-* !(101 scraping exercies)[https://github.com/stanfordjournalism/search-script-scrape]
+* ![request](https://www.npmjs.com/package/request)
+* ![cheeriojs](https://cheerio.js.org/)
+* ![ScraperWiki]
+(https://scraperwiki.com/)
+* ![Scotch.io tutorial](https://scotch.io/tutorials/scraping-the-web-with-node-js)
+* ![101 scraping exercies](https://github.com/stanfordjournalism/search-script-scrape)
