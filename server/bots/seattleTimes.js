@@ -1,6 +1,6 @@
 'use strict';
 
-// const { getDOM } = require('./utility');
+const { getDOM } = require('./utility');
 const cheerio = require('cheerio');
 const moment = require('moment');
 
@@ -22,7 +22,11 @@ function scrapeSeattleTimes(url) {
 }
 
 function extractPrimary($) {
-  // extract primary stories
+  const title = $('.top-story-title').text();
+  const url = $('.top-story-title a').attr('href');
+  const story_date = moment().format();
+
+  return { title, url, story_date };
 }
 
 function extractSecondary($) {

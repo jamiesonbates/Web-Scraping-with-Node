@@ -3,7 +3,15 @@
 const request = require('request');
 
 function getDOM(url) {
-  // handle request
+  return new Promise((resolve, reject) => {
+    return request.get(url, (err, res, DOM) => {
+      if (err) {
+        reject(err);
+      }
+
+      resolve(DOM);
+    })
+  });
 }
 
 module.exports = {
