@@ -4,7 +4,7 @@ const db = require('./connection');
 
 function insertStories(stories) {
   return new Promise((resolve, reject) => {
-    return db('stories as s1')
+    return db('stories')
       .insert(stories)
       .returning('*')
       .then((results) => {
