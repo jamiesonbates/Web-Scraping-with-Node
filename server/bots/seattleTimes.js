@@ -1,48 +1,19 @@
 'use strict';
 
-const { getDOM } = require('./utility');
+// const { getDOM } = require('./utility');
 const cheerio = require('cheerio');
 const moment = require('moment');
 
 function scrapeSeattleTimes(url) {
-  return getDOM(url)
-    .then((DOM) => {
-      // typeof DOM === string
-      // load the DOM with cheerio (an implicit action in jQuery)
-      const $ = cheerio.load(DOM);
-
-      const primary = extractPrimary($);
-      const secondary = extractSecondary($);
-
-      return { primary, secondary };
-    })
-    .catch((err) => {
-      throw err;
-    })
+  // run scraper here
 }
 
 function extractPrimary($) {
-  const title = $('.top-story-title').text();
-  const url = $('.top-story-title a').attr('href');
-  const story_date = moment().format();
-
-  return { title, url, story_date };
+  // extract primary stories
 }
 
 function extractSecondary($) {
-  const list = $('.secondary .story-list ul').children('li');
-  const stories = [];
-
-  // use cheerio's each method to iterate through li
-  list.each((i, el) => {
-    const title = $(el).children('a').text();
-    const url = $(el).children('a').attr('href');
-    const story_date = moment().format();
-
-    stories.push({ title, url, story_date });
-  });
-  
-  return stories;
+  // extract secondary stories
 }
 
 module.exports = scrapeSeattleTimes;
