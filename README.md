@@ -9,8 +9,14 @@
   * Load the DOM with cheerio.
   * Traverse the DOM and extract data with cheerio.
   * Persist data to a database.
+* Define stretch goals
 
 ## [Slides](https://docs.google.com/presentation/d/1XJkcVoDBCyGI953EfEXmbna2DHriMzJYjGk0aYlpHGk/edit?usp=sharing)
+
+## Video of Breakout
+
+## Git Repository
+[/jamiesonbates/web-scraping-with-node](https://github.com/jamiesonbates/Web-Scraping-with-Node)
 
 ## Resources
 
