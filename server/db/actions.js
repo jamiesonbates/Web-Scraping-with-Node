@@ -4,14 +4,14 @@ const db = require('./connection');
 
 function insertStories(stories) {
   return new Promise((resolve, reject) => {
-    return db('stories')
+    db('stories')
       .insert(stories)
       .returning('*')
       .then((results) => {
-        return resolve(results);
+        resolve(results);
       })
       .catch((err) => {
-        return reject(err);
+        reject(err);
       })
   });
 }
