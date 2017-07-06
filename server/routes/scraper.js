@@ -9,7 +9,11 @@ router.get('/seattletimes', (req, res, next) => {
 
   scrapeSeattleTimes(url)
     .then((data) => {
-      // retrieve and persist data
+      const { primary, secondary } = data;
+
+      primary.was_primary = true;
+
+      return Promise.all([insertStories([primary]), insertStories(secondary)]);
     })
     .then((results) => {
       res.send(results);
