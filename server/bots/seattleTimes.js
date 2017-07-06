@@ -22,8 +22,8 @@ function scrapeSeattleTimes(url) {
 }
 
 function extractPrimary($) {
-  const title = $('.top-story-title').text();
-  const url = $('.top-story-title a').attr('href');
+  const title = $('.top-story-content .top-story-title a').text();
+  const url = $('.top-story-content .top-story-title a').attr('href');
   const story_date = moment().format();
 
   return { title, url, story_date };
