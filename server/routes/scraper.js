@@ -4,23 +4,12 @@ const router = require('express').Router();
 const scrapeSeattleTimes = require('../bots/seattleTimes');
 const { insertStories } = require('../db/actions');
 
-router.get('/seattletimes', (req, res, next) => {
+router.get('/seattletimes', async (req, res, next) => {
   const url = 'http://www.seattletimes.com/';
+  const { primary, secondary } = await scrapeSeattleTimes(url);
+  const results = await Promise.all([insertStories([primary]), insertStories(secondary)]);
 
-  scrapeSeattleTimes(url)
-    .then((data) => {
-      const { primary, secondary } = data;
-
-      primary.was_primary = true;
-
-      return Promise.all([insertStories([primary]), insertStories(secondary)]);
-    })
-    .then((results) => {
-      res.send(results);
-    })
-    .catch((err) => {
-      next(err);
-    });
+  res.send(results);
 });
 
 module.exports = router;
