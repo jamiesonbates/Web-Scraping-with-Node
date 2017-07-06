@@ -9,8 +9,8 @@
   * Load the DOM with cheerio.
   * Traverse the DOM and extract data with cheerio.
   * Persist data to a database.
-  
-[Slides](https://docs.google.com/presentation/d/1XJkcVoDBCyGI953EfEXmbna2DHriMzJYjGk0aYlpHGk/edit?usp=sharing)
+
+## [Slides](https://docs.google.com/presentation/d/1XJkcVoDBCyGI953EfEXmbna2DHriMzJYjGk0aYlpHGk/edit?usp=sharing)
 
 ## Resources
 
